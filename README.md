@@ -140,9 +140,6 @@ jobs:
       - name: Configurar Docker Buildx
         uses: docker/setup-buildx-action@v2 # Habilita a ferramenta Buildx do Docker
 
-      - name: Configurar Docker QEMU
-        uses: docker/setup-qemu-action@v2 # Permite builds multiplataforma usando emulação (útil em CI)
-
       - name: Build das imagens Docker
         run: docker compose build # Executa o build das imagens definidas no docker-compose.yml
 
